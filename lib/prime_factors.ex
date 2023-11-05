@@ -12,7 +12,7 @@ defmodule PrimeFactors do
   end
 
   defp factor(number, divisor, acc) when rem(number, divisor) == 0 do
-    number = trunc(number/divisor)
+    number = trunc(number / divisor)
     factor(number, divisor, [divisor | acc])
   end
 
