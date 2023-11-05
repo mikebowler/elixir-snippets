@@ -23,10 +23,10 @@ defmodule FizzBuzz do
 
   def convert(number) do
     case {rem(number, 3), rem(number, 5), number} do
-      { 0,  0, _} -> "FizzBuzz"
-      { 0, _n, _} -> "Fizz"
-      {_n,  0, _} -> "Buzz"
-      { _,  _, n} -> Integer.to_string(n)
+      {0, 0, _} -> "FizzBuzz"
+      {0, _, _} -> "Fizz"
+      {_, 0, _} -> "Buzz"
+      {_, _, _} -> Integer.to_string(number)
     end
   end
 end
